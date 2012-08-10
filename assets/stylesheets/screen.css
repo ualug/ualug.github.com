@@ -112,9 +112,16 @@ section.display {
       text-shadow: 2px 2px 3px #000000; }
 
 
-#container {
+.container {
   margin: 0 auto;
-  width: 960px; }
+  min-width: 960px;
+  width: 80%; }
+  .container section.column {
+    display: inline-block;
+    margin: 0 10px;
+    min-width: 300px;
+    vertical-align: top;
+    width: 30%; }
 
 
 @font-face {

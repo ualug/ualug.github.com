@@ -4,21 +4,33 @@ title: The voice for OSS on campus
 banner: true
 ---
 
-<div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
+<section class="column events">
+  <h1>Up &amp; Coming</h1>
+  <ul>
     {% for post in site.posts %}
-      {% if post.layout == "post" %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+      {% if post.layout == "event" %}
+      <li><time datetime="{{ post.date }}">{{ post.date | date_to_string }}</time> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
       {% endif %}
     {% endfor %}
   </ul>
-  <h1>Pages</h1>
-  <ul class="pages">
+</section>
+<section class="column news">
+  <h1>News &amp; Blogs</h1>
+  <ul>
     {% for post in site.posts %}
-      {% if post.layout == "default" %}
-      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+      {% if post.layout == "post"  %}
+      <li><time datetime="{{ post.date }}">{{ post.date | date_to_string }}</time> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
       {% endif %}
     {% endfor %}
   </ul>
-</div>
+</section>
+<section class="column feed">
+  <h1>Feed &amp; Code</h1>
+  <ul>
+    <li><time>9 Aug 2012</time> &raquo; <a href="#">blah on GitHub</a></li>
+    <li><time>8 Aug 2012</time> &raquo; <a href="#">bloh on GitHub</a></li>
+    <li><time>7 Aug 2012</time> &raquo; <a href="#">bleh on GitHub</a></li>
+    <li><time>6 Aug 2012</time> &raquo; <a href="#">blih on GitHub</a></li>
+    <li><time>5 Aug 2012</time> &raquo; <a href="#">bluh on GitHub</a></li>
+  </ul>
+</section>

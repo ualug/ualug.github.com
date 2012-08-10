@@ -31,14 +31,14 @@ body > header {
         margin-left: 1em;
         transition: all 200ms ease 0s; }
         body > header nav.social a:hover, body > header nav.social a:focus {
-          color: #DD5921; }
+          color: #DD2121; }
           body > header nav.social a:hover b, body > header nav.social a:focus b {
-            text-shadow: 1px 1px 0 #DD5921; }
+            text-shadow: 1px 1px 0 #DD2121; }
         body > header nav.social a b, body > header nav.social a span.icon {
           margin-right: 5px; }
         body > header nav.social a b {
           font-size: 1.2em;
-          text-shadow: 1px 1px 0 #808080; }
+          text-shadow: 1px 1px 0 #777; }
       body > header nav.site {
         bottom: 10px;
         font-size: 0;
@@ -89,7 +89,7 @@ section.display {
     margin-top: 0.5em;
     width: 3em; }
   section.display a.button {
-    background: linear-gradient(135deg, #31BE19 0%, #1C5B0B 100%);
+    background: linear-gradient(135deg, #31BE19 0%, #1C5B0B 100%), #258811;
     border: 1px solid #000000;
     border-radius: 5px 5px 5px 5px;
     box-shadow: 0 1px 0 0 #3DD34A inset;

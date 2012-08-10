@@ -123,6 +123,36 @@ section.display {
     vertical-align: top;
     width: 30%; }
 
+section.feed {}
+  section.feed ul {
+    padding: 0; }
+  section.feed li {
+    border: 1px solid #AAA;
+    border-radius: 3px;
+    display: block;
+    margin: 3px 0; }
+  section.feed time {
+    background: #FEFECC;
+    border-right: 1px solid #AAA;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    width: 30%; }
+  section.feed a {
+    background: #CEF;
+    display: inline-block;
+    font-variant: small-caps;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 5px;
+    width: 70%; }
+    section.feed a.create {
+      background: #CFC; }
+    section.feed a.delete {
+      background: #FDC; }
+
+
 
 @font-face {
   font-family: "Sociceon";

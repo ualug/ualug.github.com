@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+     <meta charset="UTF-8">
+     <title>UALUG — {{ page.title }}</title>
+     <link rel="stylesheet" href="/assets/stylesheets/normalize.css">
+     <link rel="stylesheet" href="/assets/stylesheets/screen.css">
+  </head>
+  <body>
+    <header>
+      <h1><a href="./"><img src="/assets/images/logo.png" alt="UALUG"></a></h1>
+      <nav class="social">
+        <a href="irc.html"><b>#</b>IRC</a>
+        <a href="https://github.com/ualug"><span class="icon">#</span>Github</a>
+        <a href="https://facebook.com/ualug"><span class="icon">!</span>Facebook</a>
+      </nav>
+      <nav class="site">
+        <a href="./" data-current>Home</a>
+        <a href="join.html">Join</a>
+        <a href="news.html">News</a>
+        <a href="events.html">Events</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+      </nav>
+    </header>
+
+    {% if page.banner %}
+      {% include banner.html %}
+    {% endif %}
+    
+    <div class="container">
+      {{ content }}
+    </div>
+
+    <div class="ribbon"><a href="https://github.com/ualug">Find us on GitHub ♥</a></div>
+    
+    <script src="https://raw.github.com/LeaVerou/prefixfree/gh-pages/prefixfree.min.js"></script>
+  </body>
+</html>

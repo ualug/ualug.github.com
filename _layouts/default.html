@@ -10,7 +10,7 @@
      <script src="/assets/javascripts/moment.min.js"></script>
      <script src="/assets/javascripts/backbone.min.js"></script>
   </head>
-  <body>
+  <body data-page="{{ page.named }}">
     <header>
       <h1><a href="./"><img src="/assets/images/logo.png" alt="UALUG"></a></h1>
       <nav class="social">
@@ -19,7 +19,7 @@
         <a href="https://facebook.com/ualug"><span class="icon">!</span>Facebook</a>
       </nav>
       <nav class="site">
-        <a href="./" data-current>Home</a>
+        <a href="./">Home</a>
         <a href="join.html">Join</a>
         <a href="news.html">News</a>
         <a href="events.html">Events</a>
@@ -38,6 +38,7 @@
 
     <div class="ribbon"><a href="https://github.com/ualug">Find us on GitHub ♥</a></div>
     
+    <script src="/assets/javascripts/common.js"></script>
     <script src="/assets/javascripts/feed.js"></script>
     <script src="https://raw.github.com/LeaVerou/prefixfree/gh-pages/prefixfree.min.js"></script>
     {% include templates.html %}

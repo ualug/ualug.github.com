@@ -150,16 +150,17 @@ $ ->
         that.reset items
       return this
 
-
+  
   feed = new FeedItems
   feed.on "reset", ->
-    $("section.feed ul").removeClass "loading"
-    _(_(feed.models.reverse())
-      .chain()
-      .uniq(true, (item) -> item.preRender())
-      .first(15)
-      .value()
-    ).each (item) ->
+    $("section.feed ul").html("").removeClass "loading"
+    items = _(feed.models.reverse()).chain().uniq(true, (item) -> item.preRender())
+    if n = $("section.feed").attr "data-n"
+      items = items.first(+n) if /^\d+$/.test n
+    items.each (item) ->
       (new FeedItemView {model: item}).render()
   
   feed.fetch()
+
+  setInterval 60000, ->
+    feed.fetch()

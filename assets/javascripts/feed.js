@@ -220,16 +220,26 @@
     });
     feed = new FeedItems;
     feed.on("reset", function() {
-      $("section.feed ul").removeClass("loading");
-      return _(_(feed.models.reverse()).chain().uniq(true, function(item) {
+      var items, n;
+      $("section.feed ul").html("").removeClass("loading");
+      items = _(feed.models.reverse()).chain().uniq(true, function(item) {
         return item.preRender();
-      }).first(15).value()).each(function(item) {
+      });
+      if (n = $("section.feed").attr("data-n")) {
+        if (/^\d+$/.test(n)) {
+          items = items.first(+n);
+        }
+      }
+      return items.each(function(item) {
         return (new FeedItemView({
           model: item
         })).render();
       });
     });
-    return feed.fetch();
+    feed.fetch();
+    return setInterval(60000, function() {
+      return feed.fetch();
+    });
   });
 
 }).call(this);

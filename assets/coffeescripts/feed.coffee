@@ -46,6 +46,7 @@ $ ->
               target: 
                 name: ev.payload.target.login
                 link: ev.payload.target.url
+              type: "special"
             when "Fork"
               action: "forked" 
               target: 
@@ -63,6 +64,7 @@ $ ->
               target: 
                 name: "#{ev.repo.name}"
                 link: "https://github.com/#{ev.repo.name}"
+              type: "special"
             when "Push"
               action: "pushed to" 
               target: 
@@ -109,6 +111,8 @@ $ ->
               type: switch ev.payload.action
                 when "opened"
                   "create"
+                when "reopened"
+                  "special"
                 when "closed"
                   "delete"
             when "Member"
@@ -131,6 +135,8 @@ $ ->
               type: switch ev.payload.action
                 when "opened"
                   "create"
+                when "reopened"
+                  "special"
                 when "closed"
                   "delete"
             when "PullRequestReviewComment"
@@ -147,6 +153,7 @@ $ ->
 
   feed = new FeedItems
   feed.on "reset", ->
+    $("section.feed ul").removeClass "loading"
     _(_(feed.models.reverse())
       .chain()
       .uniq(true, (item) -> item.preRender())

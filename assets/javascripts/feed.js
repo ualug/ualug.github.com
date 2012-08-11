@@ -58,7 +58,8 @@
                     target: {
                       name: ev.payload.target.login,
                       link: ev.payload.target.url
-                    }
+                    },
+                    type: "special"
                   };
                 case "Fork":
                   return {
@@ -84,7 +85,8 @@
                     target: {
                       name: "" + ev.repo.name,
                       link: "https://github.com/" + ev.repo.name
-                    }
+                    },
+                    type: "special"
                   };
                 case "Push":
                   return {
@@ -156,6 +158,8 @@
                       switch (ev.payload.action) {
                         case "opened":
                           return "create";
+                        case "reopened":
+                          return "special";
                         case "closed":
                           return "delete";
                       }
@@ -190,6 +194,8 @@
                       switch (ev.payload.action) {
                         case "opened":
                           return "create";
+                        case "reopened":
+                          return "special";
                         case "closed":
                           return "delete";
                       }
@@ -214,6 +220,7 @@
     });
     feed = new FeedItems;
     feed.on("reset", function() {
+      $("section.feed ul").removeClass("loading");
       return _(_(feed.models.reverse()).chain().uniq(true, function(item) {
         return item.preRender();
       }).first(15).value()).each(function(item) {

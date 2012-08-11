@@ -126,38 +126,34 @@ section.display {
 section.feed {}
   section.feed ul {
     padding: 0; }
+    section.feed ul.loading {
+      height: 300px;
+      background: url(/assets/images/loader.gif) no-repeat 50% 50%; }
   section.feed li {
-    background: #CEF;
-    border: 1px solid #AAA;
-    border-radius: 4px;
+    color: grey;
     display: block;
-    font-size: 0.8em;
-    height: 35px;
-    margin: 3px 0; }
+    font-size: 0.8rem;
+    margin: 10px 0; }
     section.feed li.create {
-      background: #CFC; }
+      color: #258811; }
     section.feed li.delete {
-      background: #FDC; }
+      color: #DD2121; }
+    section.feed li.special {
+      color: #881; }
   section.feed time {
-    background: #FEFECC;
-    border-radius: 4px 0 0 4px; 
-    border-right: 1px solid #AAA;
-    display: block;
     float: left;
-    font-size: 0.9em;
-    height: 33px;
+    text-align: right;
+    width: 85px; }
+    section.feed time::after {
+      content: ':';
+      margin: 0 5px; }
+  section.feed span.text {
+    display: block;
     overflow: hidden;
-    padding: 3px;
-    text-align: center;
-    width: 60px; }
-  section.feed span {
-    display: inline-block;
-    height: 33px;
-    overflow: hidden;
-    padding: 3px;
-    width: 80%; }
-    section.feed span a {
-      color: blue; }
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+    section.feed span.text a {
+      color: #303D4D; }
 
 
 
@@ -204,3 +200,9 @@ a, a:active, a:visited {
     display: table; }
   .clearfix:after {
     clear: both; }
+
+/*
+ * R: #DD2121;
+ * G: #258811;
+ * B: #303D4D;
+ */

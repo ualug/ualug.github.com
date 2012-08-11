@@ -80,9 +80,9 @@
                   };
                 case "Watch":
                   return {
-                    action: "started watching",
+                    action: "stared",
                     target: {
-                      name: ev.repo.name,
+                      name: "" + ev.repo.name,
                       link: "https://github.com/" + ev.repo.name
                     }
                   };

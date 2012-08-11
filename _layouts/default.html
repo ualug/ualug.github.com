@@ -5,6 +5,10 @@
      <title>UALUG — {{ page.title }}</title>
      <link rel="stylesheet" href="/assets/stylesheets/normalize.css">
      <link rel="stylesheet" href="/assets/stylesheets/screen.css">
+     <script src="/assets/javascripts/underscore.js"></script>
+     <script src="/assets/javascripts/zepto.min.js"></script>
+     <script src="/assets/javascripts/moment.min.js"></script>
+     <script src="/assets/javascripts/backbone.min.js"></script>
   </head>
   <body>
     <header>
@@ -34,6 +38,8 @@
 
     <div class="ribbon"><a href="https://github.com/ualug">Find us on GitHub ♥</a></div>
     
+    <script src="/assets/javascripts/feed.js"></script>
     <script src="https://raw.github.com/LeaVerou/prefixfree/gh-pages/prefixfree.min.js"></script>
+    {% include templates.html %}
   </body>
 </html>

@@ -2,7 +2,7 @@
 (function() {
 
   $(function() {
-    var FeedItem, FeedItemView, fewt, log;
+    var FeedItem, FeedItemView, FeedItems, feed, log;
     log = function(arg) {
       console.log(arg);
       return arg;
@@ -17,31 +17,198 @@
       tagName: "li",
       template: _.template($("noscript.template.feed").html()),
       render: function() {
-        $("section.feed ul").append(this.template({
-          date: this.model.get("date"),
-          text: this.model.get("text"),
-          link: this.model.get("link"),
-          type: this.model.get("type")
-        }));
-        return log(this);
+        $("section.feed ul").append(this.template(this.model.toJSON()));
+        return this;
       }
     });
-    fewt = [["2 Jul 2012", "#", "passcod commented on #16"], ["5 Jul 2012", "#", "inkybutton created Blah", "create"], ["2 Aug 2012", "#", "milosivanovic forked Foo"], ["10 Aug 2012", "#", "sam did something bad", "delete"]];
-    window.fewn = [];
-    return _(fewt).each(function(v, k) {
-      fewn[k] = {
-        m: new FeedItem({
-          date: moment(v[0]),
-          text: v[2],
-          link: v[1],
-          type: v[3]
-        })
-      };
-      fewn[k].v = new FeedItemView({
-        model: fewn[k].m
-      });
-      return fewn[k].v.render();
+    FeedItems = Backbone.Collection.extend({
+      model: FeedItem,
+      fetch: function() {
+        var that;
+        that = this;
+        $.get("https://ualug-github-feed.herokuapp.com/proxy/github.json", function(j) {
+          var items;
+          items = [];
+          _(j).each(function(ev, k) {
+            var item;
+            item = {
+              date: moment(ev.created_at),
+              user: {
+                name: ev.actor.login,
+                link: ev.actor.url
+              }
+            };
+            _.extend(item, (function() {
+              switch (ev.type.replace("Event", "")) {
+                case "Follow":
+                  return {
+                    action: "followed",
+                    target: {
+                      name: ev.payload.target.login,
+                      link: ev.payload.target.url
+                    }
+                  };
+                case "Fork":
+                  return {
+                    action: "forked",
+                    target: {
+                      name: ev.payload.forkee.name,
+                      link: ev.payload.forkee.html_url
+                    },
+                    type: "create"
+                  };
+                case "Create":
+                  return {
+                    action: "created",
+                    target: {
+                      name: ev.repo.name,
+                      link: "https://github.com/" + ev.repo.name
+                    },
+                    type: "create"
+                  };
+                case "Watch":
+                  return {
+                    action: "started watching",
+                    target: {
+                      name: ev.repo.name,
+                      link: "https://github.com/" + ev.repo.name
+                    }
+                  };
+                case "Push":
+                  return {
+                    action: "pushed to",
+                    target: {
+                      name: ev.repo.name,
+                      link: "https://github.com/" + ev.repo.name
+                    }
+                  };
+                case "Gist":
+                  return {
+                    action: "gisted",
+                    target: {
+                      name: "#" + ev.payload.gist.id,
+                      link: ev.payload.gist.html_url
+                    },
+                    type: ev.payload.action
+                  };
+                case "Delete":
+                  return {
+                    action: "deleted",
+                    target: {
+                      name: ev.payload.ref,
+                      link: "https://github.com/" + ev.repo.name
+                    },
+                    type: "delete"
+                  };
+                case "CommitComment":
+                  return {
+                    action: "commented on",
+                    target: {
+                      name: ev.repo.name,
+                      link: ev.payload.comment.html_url
+                    }
+                  };
+                case "Download":
+                  return {
+                    action: "uploaded",
+                    target: {
+                      name: ev.payload.download.name,
+                      link: ev.payload.download.html_url
+                    },
+                    type: "create"
+                  };
+                case "Gollum":
+                  return {
+                    action: "wikied",
+                    target: {
+                      name: ev.repo.name,
+                      link: "https://github.com/" + ev.repo.name + "/wiki"
+                    }
+                  };
+                case "IssueComment":
+                  return {
+                    action: "commented on",
+                    target: {
+                      name: "" + ev.repo.name + "\#" + ev.payload.issue.number,
+                      link: ev.payload.comment.html_url
+                    }
+                  };
+                case "Issues":
+                  return {
+                    action: ev.payload.action,
+                    target: {
+                      name: "" + ev.repo.name + "\#" + ev.payload.issue.number,
+                      link: ev.payload.issue.html_url
+                    },
+                    type: (function() {
+                      switch (ev.payload.action) {
+                        case "opened":
+                          return "create";
+                        case "closed":
+                          return "delete";
+                      }
+                    })()
+                  };
+                case "Member":
+                  return {
+                    action: "added a collaborator",
+                    target: {
+                      name: ev.payload.member.login,
+                      link: ev.payload.member.html_url
+                    },
+                    type: "create"
+                  };
+                case "Public":
+                  return {
+                    action: "open sourced",
+                    target: {
+                      name: ev.repo.name,
+                      link: "https://github.com/" + ev.repo.name
+                    },
+                    type: "create"
+                  };
+                case "PullRequest":
+                  return {
+                    action: ev.payload.action,
+                    target: {
+                      name: "" + ev.repo.name + "\#" + ev.payload.number,
+                      link: ev.payload.pull_request.html_url
+                    },
+                    type: (function() {
+                      switch (ev.payload.action) {
+                        case "opened":
+                          return "create";
+                        case "closed":
+                          return "delete";
+                      }
+                    })()
+                  };
+                case "PullRequestReviewComment":
+                  return {
+                    action: "commented on",
+                    target: {
+                      name: ev.repo.name,
+                      link: ev.payload.comment.html_url
+                    }
+                  };
+              }
+            })());
+            return items[k] = new that.model(item);
+          });
+          return that.reset(items);
+        });
+        return this;
+      }
     });
+    feed = new FeedItems;
+    feed.on("reset", function() {
+      return _(feed.last(10).reverse()).each(function(item) {
+        return (new FeedItemView({
+          model: item
+        })).render();
+      });
+    });
+    return feed.fetch();
   });
 
 }).call(this);

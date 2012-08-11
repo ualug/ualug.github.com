@@ -32,13 +32,8 @@ body > header {
         transition: all 200ms ease 0s; }
         body > header nav.social a:hover, body > header nav.social a:focus {
           color: #DD2121; }
-          body > header nav.social a:hover b, body > header nav.social a:focus b {
-            text-shadow: 1px 1px 0 #DD2121; }
-        body > header nav.social a b, body > header nav.social a span.icon {
+        body > header nav.social a span.icon {
           margin-right: 5px; }
-        body > header nav.social a b {
-          font-size: 1.2em;
-          text-shadow: 1px 1px 0 #777; }
       body > header nav.site {
         bottom: 10px;
         font-size: 0;
@@ -177,11 +172,11 @@ section.column.feed > a {
   font-family: "Sociceon";
   font-style: normal;
   font-weight: normal;
-  src:  url("/assets/fonts/socicon.eot");
-  src:  url("/assets/fonts/socicon.eot?#iefix") format("embedded-opentype"),
-        url("/assets/fonts/socicon.woff") format("woff"),
-        url("/assets/fonts/socicon.ttf") format("truetype"),
-        url("/assets/fonts/socicon.svg#socicon") format("svg"); }
+  src:  url("/assets/fonts/sociceon.eot");
+  src:  url("/assets/fonts/sociceon.eot?#iefix") format("embedded-opentype"),
+        url("/assets/fonts/sociceon.woff") format("woff"),
+        url("/assets/fonts/sociceon.ttf") format("truetype"),
+        url("/assets/fonts/sociceon.svg#socicon") format("svg"); }
 
 .icon {
   font-family: "Sociceon"; }

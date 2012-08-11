@@ -11,13 +11,25 @@
       defaults: {
         date: moment(),
         type: "normal"
+      },
+      preRender: function() {
+        var action, target, user;
+        user = this.get("user");
+        action = this.get("action");
+        target = this.get("target");
+        this.set("text", "" + ("<a class='user' href='" + user.link + "'>" + user.name + "</a>") + (" " + action + " ") + ("<a class='target' href='" + target.link + "'>" + target.name + "</a>"));
+        return this.get("text");
       }
     });
     FeedItemView = Backbone.View.extend({
       tagName: "li",
       template: _.template($("noscript.template.feed").html()),
       render: function() {
-        $("section.feed ul").append(this.template(this.model.toJSON()));
+        $("section.feed ul").append(this.template({
+          date: this.model.get("date"),
+          text: this.model.get("text"),
+          type: this.model.get("type")
+        }));
         return this;
       }
     });
@@ -202,7 +214,9 @@
     });
     feed = new FeedItems;
     feed.on("reset", function() {
-      return _(feed.last(10).reverse()).each(function(item) {
+      return _(_(feed.models).chain().uniq(true, function(item) {
+        return item.preRender();
+      }).last(15).value().reverse()).each(function(item) {
         return (new FeedItemView({
           model: item
         })).render();

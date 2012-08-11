@@ -129,9 +129,10 @@ section.feed {}
   section.feed li {
     background: #CEF;
     border: 1px solid #AAA;
-    border-radius: 3px;
+    border-radius: 4px;
     display: block;
-    height: 30px;
+    font-size: 0.8em;
+    height: 35px;
     margin: 3px 0; }
     section.feed li.create {
       background: #CFC; }
@@ -139,19 +140,24 @@ section.feed {}
       background: #FDC; }
   section.feed time {
     background: #FEFECC;
+    border-radius: 4px 0 0 4px; 
     border-right: 1px solid #AAA;
     display: block;
     float: left;
-    height: 30px;
-    line-height: 30px;
+    font-size: 0.9em;
+    height: 33px;
+    overflow: hidden;
+    padding: 3px;
     text-align: center;
-    width: 90px; }
+    width: 60px; }
   section.feed span {
-    display: inline;
-    font-size: 0.8em;
-    font-variant: small-caps;
-    padding-left: 5px;
-    width: 70%; }
+    display: inline-block;
+    height: 33px;
+    overflow: hidden;
+    padding: 3px;
+    width: 80%; }
+    section.feed span a {
+      color: blue; }
 
 
 

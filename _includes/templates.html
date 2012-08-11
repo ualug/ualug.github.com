@@ -1,10 +1,6 @@
 <noscript class="template feed">
   <li class="<%= type %>">
     <time datetime="<%= date.format() %>"><%= date.fromNow() %></time>
-    <span>
-      <a class="user" href="<%= user.link %>"><%= user.name %></a>
-      <%= action %>
-      <a class="target" href="<%= target.link %>"><%= target.name %></a>
-    </span>
+    <span><%= text %></span>
   </li>
 </noscript>

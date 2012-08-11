@@ -7,12 +7,24 @@ $ ->
     defaults:
       date: moment()
       type: "normal"
+    preRender: ->
+      user   = this.get "user"
+      action = this.get "action"
+      target = this.get "target"
+      this.set "text", "" +
+        "<a class='user' href='#{user.link}'>#{user.name}</a>" +
+        " #{action} " +
+        "<a class='target' href='#{target.link}'>#{target.name}</a>"
+      return this.get "text"
 
   FeedItemView = Backbone.View.extend
     tagName: "li"
     template: _.template $("noscript.template.feed").html()
     render: ->
-      $("section.feed ul").append this.template this.model.toJSON()
+      $("section.feed ul").append this.template
+        date: this.model.get "date"
+        text: this.model.get "text"
+        type: this.model.get "type"
       return this
 
   FeedItems = Backbone.Collection.extend
@@ -135,7 +147,13 @@ $ ->
 
   feed = new FeedItems
   feed.on "reset", ->
-    _(feed.last(10).reverse()).each (item) ->
+    _(_(feed.models)
+      .chain()
+      .uniq(true, (item) -> item.preRender())
+      .last(15)
+      .value()
+      .reverse()
+    ).each (item) ->
       (new FeedItemView {model: item}).render()
   
   feed.fetch()

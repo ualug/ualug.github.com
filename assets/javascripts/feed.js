@@ -37,7 +37,7 @@
       model: FeedItem,
       fetch: function() {
         var that;
-        that = this;
+        that = feed || this;
         $.get("https://ualug-github-feed.herokuapp.com/proxy/github.json", function(j) {
           var items;
           items = [];
@@ -211,7 +211,7 @@
                   };
               }
             })());
-            return items[k] = new that.model(item);
+            return items[k] = new FeedItem(item);
           });
           return that.reset(items);
         });
@@ -237,9 +237,7 @@
       });
     });
     feed.fetch();
-    return setInterval(60000, function() {
-      return feed.fetch();
-    });
+    return setInterval(feed.fetch, 60000);
   });
 
 }).call(this);

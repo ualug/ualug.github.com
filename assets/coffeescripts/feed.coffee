@@ -30,7 +30,7 @@ $ ->
   FeedItems = Backbone.Collection.extend
     model: FeedItem
     fetch: ->
-      that = this
+      that = feed || this
       $.get "https://ualug-github-feed.herokuapp.com/proxy/github.json", (j) ->
         items = []
         _(j).each (ev, k) ->
@@ -145,7 +145,7 @@ $ ->
                 name: ev.repo.name
                 link: ev.payload.comment.html_url
 
-          items[k] = new that.model item
+          items[k] = new FeedItem item
 
         that.reset items
       return this
@@ -161,6 +161,4 @@ $ ->
       (new FeedItemView {model: item}).render()
   
   feed.fetch()
-
-  setInterval 60000, ->
-    feed.fetch()
+  setInterval feed.fetch, 60000

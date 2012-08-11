@@ -214,9 +214,9 @@
     });
     feed = new FeedItems;
     feed.on("reset", function() {
-      return _(_(feed.models).chain().uniq(true, function(item) {
+      return _(_(feed.models.reverse()).chain().uniq(true, function(item) {
         return item.preRender();
-      }).last(15).value().reverse()).each(function(item) {
+      }).first(15).value()).each(function(item) {
         return (new FeedItemView({
           model: item
         })).render();

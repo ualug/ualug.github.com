@@ -147,12 +147,11 @@ $ ->
 
   feed = new FeedItems
   feed.on "reset", ->
-    _(_(feed.models)
+    _(_(feed.models.reverse())
       .chain()
       .uniq(true, (item) -> item.preRender())
-      .last(15)
+      .first(15)
       .value()
-      .reverse()
     ).each (item) ->
       (new FeedItemView {model: item}).render()
   

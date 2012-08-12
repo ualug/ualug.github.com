@@ -8,6 +8,7 @@ html {
 body > header {
   background: url("/assets/images/background.png"), linear-gradient(180deg, rgba(255, 255, 255, 0.6) 0%, rgba(221, 221, 221, 0.6) 15%, rgba(248, 248, 248, 0.6) 90%, rgba(201, 201, 201, 0.6) 92%, #000000 100%);
   box-shadow: 2px 0 5px #000;
+  font-family: Junction, Arial, Helvetica, 'Helvetica Neue', sans-serif;
   height: 4em;
   min-width: 960px;
   padding: 0;

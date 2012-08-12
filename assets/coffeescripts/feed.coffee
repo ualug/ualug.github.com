@@ -60,7 +60,7 @@ $ ->
                 link: "https://github.com/#{ev.repo.name}"
               type: "create"
             when "Watch"
-              action: "stared" 
+              action: "starred" 
               target: 
                 name: "#{ev.repo.name}"
                 link: "https://github.com/#{ev.repo.name}"

@@ -36,7 +36,7 @@ body > header {
         body > header nav.social a span.icon {
           margin-right: 5px; }
       body > header nav.site {
-        bottom: 10px;
+        bottom: 5px;
         font-size: 0;
         font-weight: bold;
         padding: 7px 0 7px 7px;

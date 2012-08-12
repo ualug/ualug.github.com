@@ -23,7 +23,7 @@
     });
     FeedItemView = Backbone.View.extend({
       tagName: "li",
-      template: _.template($("noscript.template.feed").html()),
+      template: _.template($("noscript.template.feed").text()),
       render: function() {
         $("section.feed ul").append(this.template({
           date: this.model.get("date"),

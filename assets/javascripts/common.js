@@ -2,10 +2,29 @@
 (function() {
 
   $(function() {
-    return $("nav.site a").each(function(i, e) {
+    var $irc;
+    $("nav.site a").each(function(i, e) {
       if ($(e).text() === $("body").attr("data-page")) {
         return $(e).attr("data-current", true);
       }
+    });
+    $irc = $(".irc");
+    $("body").removeClass("noirc");
+    $("iframe", $irc).width($(window).width() - 15);
+    $(".close", $irc).click(function() {
+      $("iframe", $irc).hide();
+      $(this).hide();
+      return $(".open", $irc).show();
+    });
+    $(".open", $irc).click(function() {
+      $("iframe", $irc).show();
+      $(this).hide();
+      return $(".close", $irc).show();
+    });
+    return $(".detach", $irc).click(function() {
+      $("body").addClass("noirc");
+      $irc.remove();
+      return true;
     });
   });
 

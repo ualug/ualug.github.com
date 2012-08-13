@@ -181,6 +181,30 @@ section.column.feed > a {
     content: '—';
     margin: 0 5px; }
 
+.irc {
+  background: #E3F8FA;
+  border-top: 3px solid gray;
+  bottom: 0;
+  position: fixed;
+  width: 100%; }
+  .irc iframe {
+    border: 0;
+    bottom: -5px;
+    display: none;
+    height: 250px;
+    position: relative; }
+  .irc .close {
+    display: none; }
+  .irc a {
+    border-bottom: 1px solid;
+    float: right;
+    font-size: 12px;
+    margin: 3px 7px; }
+  .irc h1 {
+    border-bottom: 1px solid gray;
+    font-size: 14px;
+    margin: 0;
+    padding: 2px; }
 
 @font-face {
   font-family: "Sociceon";
@@ -197,6 +221,7 @@ section.column.feed > a {
 
 a, a:active, a:visited {
   color: inherit;
+  cursor: pointer;
   text-decoration: none;
   transition: color 300ms; }
 
@@ -206,9 +231,11 @@ a, a:active, a:visited {
   overflow: hidden;
   position: fixed;
   right: -3.5em;
-  bottom: 2.5em;
+  bottom: 4em;
   transform: rotate(-45deg);
   box-shadow: 0 0 1em #888; }
+  .noirc .ribbon {
+    bottom: 2.5em; }
   .ribbon a {
     border: 1px solid white;
     color: #fff;

@@ -11,7 +11,7 @@
      <script src="/assets/javascripts/moment.min.js"></script>
      <script src="/assets/javascripts/backbone.min.js"></script>
   </head>
-  <body data-page="{{ page.named }}">
+  <body data-page="{{ page.named }}" class="noirc">
     <header>
       <h1><a href="/"><img src="/assets/images/logo.png" alt="UALUG"></a></h1>
       <nav class="social">
@@ -41,6 +41,10 @@
     </div>
 
     <div class="ribbon"><a href="https://github.com/ualug">Find us on GitHub ♥</a></div>
+
+    {% unless page.noirc %}
+      {% include irc.html %}
+    {% endunless %}
     
     <script src="/assets/javascripts/common.js"></script>
     <script src="/assets/javascripts/feed.js"></script>

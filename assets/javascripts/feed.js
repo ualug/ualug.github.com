@@ -47,7 +47,7 @@
               date: moment(ev.created_at),
               user: {
                 name: ev.actor.login,
-                link: ev.actor.url
+                link: "https://github.com/" + ev.actor.login
               }
             };
             _.extend(item, (function() {

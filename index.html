@@ -6,7 +6,7 @@ banner: true
 ---
 
 <section class="column events">
-  <h1>Up &amp; Coming</h1>
+  <h1><a href="/events.html">Up &amp; Coming</a></h1>
   <ul>
     {% for post in site.posts %}
       {% if post.layout == "event" %}
@@ -16,7 +16,7 @@ banner: true
   </ul>
 </section>
 <section class="column news">
-  <h1>News &amp; Blogs</h1>
+  <h1><a href="/news.html">News &amp; Blogs</a></h1>
   <ul>
     {% for post in site.posts %}
       {% if post.layout == "post"  %}
@@ -26,7 +26,7 @@ banner: true
   </ul>
 </section>
 <section class="column feed" data-n="15">
-  <h1>Open source &amp; Us</h1>
+  <h1><a href="/projects.html">Open source &amp; Us</a></h1>
   <ul class="loading"></ul>
   <a href="/projects.html#full-feed">See more</a>
 </section>

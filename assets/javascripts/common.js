@@ -12,16 +12,19 @@
     $("body").removeClass("noirc");
     $("iframe", $irc).width($(window).width() - 15);
     $(".close", $irc).click(function() {
+      $("body").removeClass("ircopen");
       $("iframe", $irc).hide();
       $(this).hide();
       return $(".open", $irc).show();
     });
     $(".open", $irc).click(function() {
+      $("body").addClass("ircopen");
       $("iframe", $irc).show();
       $(this).hide();
       return $(".close", $irc).show();
     });
     return $(".detach", $irc).click(function() {
+      $("body").removeClass("ircopen");
       $("body").addClass("noirc");
       $irc.remove();
       return true;

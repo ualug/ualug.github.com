@@ -111,6 +111,8 @@ section.banner {
 .container {
   margin: 0 auto 50px;
   width: 840px; }
+  .ircopen .container {
+    margin-bottom: 300px; }
 
 section.column {
   display: inline-block;
@@ -236,6 +238,8 @@ a, a:active, a:visited {
   box-shadow: 0 0 1em #888; }
   .noirc .ribbon {
     bottom: 2.5em; }
+  .ircopen .ribbon {
+    bottom: 20em; }
   .ribbon a {
     border: 1px solid white;
     color: #fff;

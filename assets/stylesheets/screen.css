@@ -109,7 +109,7 @@ section.banner {
 
 
 .container {
-  margin: 0 auto;
+  margin: 0 auto 50px;
   width: 840px; }
 
 section.column {

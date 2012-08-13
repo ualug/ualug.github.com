@@ -11,6 +11,9 @@
     $irc = $(".irc");
     $("body").removeClass("noirc");
     $("iframe", $irc).width($(window).width() - 15);
+    $(window).on('resize', function() {
+      return $("iframe", $irc).width($(window).width() - 15);
+    });
     $(".close", $irc).click(function() {
       $("body").removeClass("ircopen");
       $("iframe", $irc).hide();

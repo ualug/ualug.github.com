@@ -4,7 +4,11 @@ $ ->
 
   $irc = $(".irc")
   $("body").removeClass "noirc"
+
   $("iframe", $irc).width $(window).width() - 15
+  $(window).on 'resize', ->
+    $("iframe", $irc).width $(window).width() - 15
+
 
   $(".close", $irc).click ->
     $("body").removeClass "ircopen"

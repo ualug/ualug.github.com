@@ -123,6 +123,27 @@ section.column {
     font-variant: small-caps; }
   section.column:hover h1 a, section.column:focus h1 a {
     color: #303D4D; }
+  section.column ul {
+    padding: 0; }
+  section.column li {
+    color: grey;
+    display: block;
+    font-size: 0.8rem;
+    margin: 10px 0; }
+  section.column time {
+    float: left;
+    text-align: right;
+    width: 85px;
+    white-space: nowrap; }
+  section.column span.text {
+    display: inline }
+    section.column span.text:before {
+      content: ':';
+      margin: 0 5px; }
+    section.column span.text a {
+      color: #303D4D; }
+      section.column span.text a:hover, section.column span.text a:focus {
+        color: #666; }
 
 
 section.feed {}
@@ -130,40 +151,23 @@ section.feed {}
     width: 300px; }
   section.feed.columns {
     column-width: 300px; }
-  section.feed ul {
-    padding: 0; }
+  section.feed ul {}
     section.feed ul.loading {
       height: 300px;
       background: url(/assets/images/loader.gif) no-repeat 50% 50%; }
-  section.feed li {
-    color: grey;
-    display: block;
-    font-size: 0.8rem;
-    margin: 10px 0; }
+  section.feed li {}
     section.feed li.create {
       color: #258811; }
     section.feed li.delete {
       color: #DD2121; }
     section.feed li.special {
       color: #881; }
-  section.feed time {
-    float: left;
-    text-align: right;
-    width: 85px;
-    white-space: nowrap; }
   section.feed span.text {
     display: block;
     max-width: 300px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap; }
-    section.feed span.text:before {
-      content: ':';
-      margin: 0 5px; }
-    section.feed span.text a {
-      color: #303D4D; }
-      section.feed span.text a:hover, section.feed span.text a:focus {
-        color: #666; }
 
 section.column.feed > a {
   color: grey;

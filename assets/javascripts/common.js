@@ -2,7 +2,7 @@
 (function() {
 
   $(function() {
-    var $irc;
+    var $irc, closeIrc, detachIrc, openIrc;
     $("nav.site a").each(function(i, e) {
       if ($(e).text() === $("body").attr("data-page")) {
         return $(e).attr("data-current", true);
@@ -14,23 +14,33 @@
     $(window).on('resize', function() {
       return $("iframe", $irc).width($(window).width() - 15);
     });
-    $(".close", $irc).click(function() {
-      $("body").removeClass("ircopen");
-      $("iframe", $irc).hide();
-      $(this).hide();
-      return $(".open", $irc).show();
-    });
-    $(".open", $irc).click(function() {
+    openIrc = function() {
       $("body").addClass("ircopen");
       $("iframe", $irc).show();
-      $(this).hide();
+      $(".open", $irc).hide();
       return $(".close", $irc).show();
-    });
-    return $(".detach", $irc).click(function() {
+    };
+    closeIrc = function() {
+      $("body").removeClass("ircopen");
+      $("iframe", $irc).hide();
+      $(".close", $irc).hide();
+      return $(".open", $irc).show();
+    };
+    detachIrc = function() {
       $("body").removeClass("ircopen");
       $("body").addClass("noirc");
       $irc.remove();
       return true;
+    };
+    $(".open", $irc).click(openIrc);
+    $(".close", $irc).click(closeIrc);
+    $(".detach", $irc).click(detachIrc);
+    return $("nav.social .irc-open").click(function() {
+      if ($("body").hasClass("ircopen")) {
+        return closeIrc();
+      } else {
+        return openIrc();
+      }
     });
   });
 

@@ -108,14 +108,6 @@ section.banner {
       text-shadow: 2px 2px 3px #000000; }
 
 
-.container {
-  margin: 0 auto 50px;
-  width: 840px; }
-  .ircopen .container {
-    margin-bottom: 300px; }
-  .container section a {
-    border-bottom: 0; }
-
 section.column {
   display: inline-block;
   margin: 0 5px;
@@ -182,7 +174,9 @@ section.column.feed > a {
     content: '—';
     margin: 0 5px; }
 
-.container {}
+.container {
+  margin: 0 auto 50px;
+  width: 840px; }
   .container header {
     border-bottom: 1px solid #666;
     margin-bottom: 30px;
@@ -218,6 +212,8 @@ section.column.feed > a {
     border-left: 1px solid gray;
     margin-left: 10px;
     padding-left: 10px; }
+  .container section a {
+    border-bottom: 0; }
 
 .irc {
   background: #E3F8FA;
@@ -243,6 +239,11 @@ section.column.feed > a {
     font-size: 14px;
     margin: 0;
     padding: 2px; }
+
+.ircopen .container {
+  margin-bottom: 300px; }
+.ircopen nav.social .irc-open {
+  color: #DD2121; }
 
 @font-face {
   font-family: "Sociceon";

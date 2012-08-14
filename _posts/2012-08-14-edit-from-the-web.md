@@ -13,7 +13,7 @@ If you've got write access to the [ualug/uasite repository on GitHub][1], you ca
  
  - If you are comfortable with git, but not with Ruby, or if you just want to edit and create posts, you can do the same as above, clone the repo, but touch only the contents of `_posts/`.
  
- - Otherwise, or if you're not on your own machine, at a Uni computer for example, you can access and modify everything through [Prose][4]. Prose is a web-based content editor for GitHub, and it's what I'm using to type this very document. Go to http://prose.io/#ualug/uasite/edit/gh-pages/_posts/ and authenticate with GitHub. You'll now be able to do everything from a nice interface!
+ - Otherwise, or if you're not on your own machine, at a Uni computer for example, you can access and modify everything through [Prose][4]. Prose is a web-based content editor for GitHub, and it's what I'm using to type this very document. Go to http://prose.io/#ualug/uasite/edit/gh-pages/ and authenticate with GitHub. You'll now be able to do everything from a nice interface!
 
 
 There are a few rules to respect to be able to effectively edit posts.

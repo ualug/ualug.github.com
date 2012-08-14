@@ -113,6 +113,8 @@ section.banner {
   width: 840px; }
   .ircopen .container {
     margin-bottom: 300px; }
+  .container section a {
+    border-bottom: 0; }
 
 section.column {
   display: inline-block;

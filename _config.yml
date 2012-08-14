@@ -3,3 +3,5 @@ pygments: true
 future:   true
 server:   true
 auto:     true
+prose:
+  rooturl: "_posts"

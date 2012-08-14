@@ -28,3 +28,11 @@ There are a few rules to respect to be able to effectively edit posts.
 
 
 With that, you should be able to contribute content quite easily :)
+
+[1]: https://github.com/ualug/uasite
+[2]: http://jekyllrb.com
+[3]: https://pages.github.com
+[4]: http://prose.io
+[5]: http://daringfireball.net/projects/markdown
+[6]: http://textile.thresholdstate.com/
+[7]: https://github.com/mojombo/jekyll/wiki/YAML-Front-Matter

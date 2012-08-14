@@ -119,10 +119,7 @@ section.column {
   margin: 0 5px;
   vertical-align: top;
   width: 250px; }
-  section.column h1 {
-    color: #666;
-    font-size: 1.5em;
-    font-variant: small-caps; }
+  section.column h1 {}
   section.column:hover h1 a, section.column:focus h1 a {
     color: #303D4D; }
   section.column ul {
@@ -182,6 +179,43 @@ section.column.feed > a {
   section.column.feed > a:before, section.column.feed > a:after {
     content: '—';
     margin: 0 5px; }
+
+.container {}
+  .container header {
+    border-bottom: 1px solid #666;
+    margin-bottom: 30px;
+    padding-top: 30px; }
+    .container header h1 {
+      margin: 0 0 10px; }
+      .container header h1:hover, .container header h1:focus {
+        color: #303D4D; }
+    .container header time {
+      color: gray;
+      font-size: 12px;
+      margin-left: 2em; }
+      .container header time:before {
+        content: '›› '; }
+    .container header a {
+      border-bottom: 0; }
+  .container h1 {
+    color: #666;
+    font-size: 1.5em;
+    font-variant: small-caps; }
+  .container a {
+    border-bottom: 1px dashed #303D4D; }
+    .container a:hover, .container a:focus {
+      border-bottom-style: solid; }
+  .container p {
+    line-height: 1.7em; }
+  .container code {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid gray;
+    border-radius: 3px 3px 3px 3px;
+    padding: 2px; }
+  .container blockquote {
+    border-left: 1px solid gray;
+    margin-left: 10px;
+    padding-left: 10px; }
 
 .irc {
   background: #E3F8FA;

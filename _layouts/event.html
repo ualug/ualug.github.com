@@ -1,7 +1,11 @@
 ---
 layout: default
+kind: event
 ---
 
-<div id="event">
-  {{ content }}
-</div>
+<header>
+  <time datetime="{{ page.date }}">{{ page.date | date_to_string }}</time>
+  <h1><a href="{{ page.url }}">{{ page.title }}</a></h1>
+</header>
+
+{{ content }}

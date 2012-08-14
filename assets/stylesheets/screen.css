@@ -2,11 +2,13 @@
   box-sizing: border-box; }
 
 html {
+  background: url("/assets/images/background.png") #FFF;
   background: url("/assets/images/background.png"), linear-gradient(90deg, #CCCCCC 0%, #FFFFFF 50%, #CCCCCC 100%);
   font-family: Junction, Arial, Helvetica, 'Helvetica Neue', sans-serif; }
 
 
 body > header {
+  background: url("/assets/images/background.png") #EEE;
   background: url("/assets/images/background.png"), linear-gradient(180deg, rgba(255, 255, 255, 0.6) 0%, rgba(221, 221, 221, 0.6) 15%, rgba(248, 248, 248, 0.6) 90%, rgba(201, 201, 201, 0.6) 92%, #000000 100%);
   box-shadow: 2px 0 5px #000;
   height: 64px;
@@ -65,6 +67,7 @@ body > header {
 
 
 section.banner {
+  background: #303D4D;
   background: url("/assets/images/banner_background.png"), #303D4D;
   box-shadow: 2px 0 5px #000000 inset;
   font-size: 48px;
@@ -86,6 +89,7 @@ section.banner {
     padding-top: 25px;
     width: 145px; }
   section.banner a.button {
+    background: #258811;
     background: linear-gradient(135deg, #31BE19 0%, #1C5B0B 100%), #258811;
     border: 1px solid #000000;
     border-radius: 5px 5px 5px 5px;
@@ -119,7 +123,7 @@ section.column {
   section.column ul {
     padding: 0; }
   section.column li {
-    color: grey;
+    color: gray;
     display: block;
     font-size: 0.8rem;
     margin: 10px 0; }
@@ -163,7 +167,7 @@ section.feed {}
     white-space: nowrap; }
 
 section.column.feed > a {
-  color: grey;
+  color: gray;
   display: block;
   font-size: 0.75rem;
   text-align: center;

@@ -143,12 +143,14 @@ section.column {
       section.column span.text a:hover, section.column span.text a:focus {
         color: #666; }
 
+section.multi {
+  display: block;
+  column-width: 300px;
+  width: auto !important; }
 
 section.feed {}
   section.feed.column {
     width: 300px; }
-  section.feed.columns {
-    column-width: 300px; }
   section.feed ul {}
     section.feed ul.loading {
       height: 300px;

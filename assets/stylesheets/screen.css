@@ -4,6 +4,7 @@
 html {
   background: url("/assets/images/background.png") #FFF;
   background: url("/assets/images/background.png"), linear-gradient(90deg, #CCCCCC 0%, #FFFFFF 50%, #CCCCCC 100%);
+  color: #222;
   font-family: Junction, Arial, Helvetica, 'Helvetica Neue', sans-serif; }
 
 
@@ -46,7 +47,7 @@ body > header {
         text-transform: uppercase;
         width: auto; }
         body > header nav.site a {
-          border-bottom: 3px solid #000000;
+          border-bottom: 3px solid #222;
           padding: 4px 0.5em 0;
           transition: all 300ms linear; }
           body > header nav.site a:hover, body > header nav.site a:focus {
@@ -58,11 +59,11 @@ body > header {
             body > header nav.site a:hover:last-child, body > header nav.site a:focus:last-child {
               padding-right: 0.5em; }
           body > header nav.site a[data-current] {
-            background: none repeat scroll 0 0 #000000;
-            border-color: #000000;
+            background: none repeat scroll 0 0 #222;
+            border-color: #222;
             color: #FFFFFF; }
             body > header nav.site a[data-current]:hover, body > header nav.site a[data-current]:focus {
-              border-color: #000000;
+              border-color: #222;
               color: #FFFFFF; }
 
 
@@ -91,7 +92,7 @@ section.banner {
   section.banner a.button {
     background: #258811;
     background: linear-gradient(135deg, #31BE19 0%, #1C5B0B 100%), #258811;
-    border: 1px solid #000000;
+    border: 1px solid #222;
     border-radius: 5px 5px 5px 5px;
     box-shadow: 0 1px 0 0 #3DD34A inset;
     color: rgba(255, 255, 255, 0.8);

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Installing Linux: the low-impact, low-effort way
+title: "Installing Linux: the low-impact, low-effort way"
 author: Jamie
 published: true
 ---

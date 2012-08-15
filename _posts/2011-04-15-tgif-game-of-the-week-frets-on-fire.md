@@ -1,7 +1,8 @@
 ---
 layout: post
-title: TGIF Game of the Week: Frets on Fire
+title: "TGIF Game of the Week: Frets on Fire"
 published: true
+author: Noel Zeng
 ---
 
 #### This post is an archive cross-post from the old UALUG website.

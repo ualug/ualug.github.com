@@ -1,7 +1,8 @@
 ---
 layout: post
-title: What We’ve Been Up To
+title: "What We’ve Been Up To"
 published: true
+author: Noel Zeng
 ---
 
 #### This post is an archive cross-post from the old UALUG website. Links might be broken.

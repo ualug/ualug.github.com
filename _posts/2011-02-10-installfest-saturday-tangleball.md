@@ -2,6 +2,7 @@
 layout: post
 title: "Installfest Sat 12 Feb @ Tangleball"
 published: true
+author: Zarek Jenkinson
 ---
 
 #### This post is an archive cross-post from the old UALUG website. Links might be broken.

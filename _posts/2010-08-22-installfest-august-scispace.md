@@ -2,6 +2,7 @@
 layout: post
 title: "Installfest! 23 – 26 August, 1 – 4pm @ SciSpace"
 published: true
+author: Noel Zeng
 ---
 
 #### This post is an archive cross-post from the old UALUG website. Links might be broken.

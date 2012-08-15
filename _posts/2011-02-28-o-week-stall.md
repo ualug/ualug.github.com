@@ -2,6 +2,7 @@
 layout: post
 published: true
 title: "O-Week: We have a stall!"
+author: Noel Zeng
 ---
 
 #### This post is an archive cross-post from the old UALUG website. Links might be broken.

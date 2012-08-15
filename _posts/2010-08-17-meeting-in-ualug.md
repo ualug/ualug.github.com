@@ -2,6 +2,7 @@
 layout: post
 title: "Meeting 17/8/10 in #ualug"
 published: true
+author: Noel Zeng
 ---
 
 #### This post is an archive cross-post from the old UALUG website. Links might be broken.

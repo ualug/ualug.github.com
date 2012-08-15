@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: event
 published: true
 title: "O-Week: We have a stall!"
 author: Noel Zeng

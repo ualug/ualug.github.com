@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: event
 title: "Meeting 17/8/10 in #ualug"
 published: true
 author: Noel Zeng

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: event
 title: "Installfest! 23 – 26 August, 1 – 4pm @ SciSpace"
 published: true
 author: Noel Zeng

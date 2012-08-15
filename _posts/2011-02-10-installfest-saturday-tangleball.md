@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: event
 title: "Installfest Sat 12 Feb @ Tangleball"
 published: true
 author: Zarek Jenkinson

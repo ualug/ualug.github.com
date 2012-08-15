@@ -5,6 +5,8 @@ author: toniosm
 published: true
 ---
 
+#### This post is an archive cross-post from the old UALUG website. Links might be broken.
+
 Attendance:
 
  - Nevyn
@@ -67,7 +69,9 @@ Increasing LUG visibility
 - Academic Committee (?) **Noel** to send email
 
 ADMIN Multiple Meetings
------------------------
+---
+
+--------------------
 
 - arrange > 1 meeting to accomodate other members
 - When?

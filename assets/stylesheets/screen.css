@@ -167,15 +167,15 @@ section.feed {}
     text-overflow: ellipsis;
     white-space: nowrap; }
 
-section.column.feed > a {
+section.column a.more {
   color: gray;
   display: block;
   font-size: 0.75rem;
   text-align: center;
   text-transform: lowercase; }
-  section.column.feed > a:hover, section.column.feed > a:focus {
+  section.column a.more:hover, section.column a.more:focus {
     color: #303D4D; }
-  section.column.feed > a:before, section.column.feed > a:after {
+  section.column a.more:before, section.column a.more:after {
     content: '—';
     margin: 0 5px; }
 

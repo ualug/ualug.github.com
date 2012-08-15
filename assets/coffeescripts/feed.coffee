@@ -119,7 +119,7 @@ $ ->
               action: "added a collaborator"
               target:
                 name: ev.payload.member.login
-                link: ev.payload.member.html_url
+                link: "https://github.com/#{ev.payload.member.login}"
               type: "create"
             when "Public"
               action: "open sourced"

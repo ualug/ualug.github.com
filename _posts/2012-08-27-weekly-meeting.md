@@ -5,4 +5,4 @@ author: passcod
 published: true
 ---
 
-**Eng Cafe** as usual, **1pm Wednesday**.
+**Eng Cafe** as usual, **3pm Monday**.

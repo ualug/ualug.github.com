@@ -5,4 +5,4 @@ author: passcod
 published: true
 ---
 
-__Eng Cafe__ as usual, __1pm Wednesday__.
+**Eng Cafe** as usual, **1pm Wednesday**.

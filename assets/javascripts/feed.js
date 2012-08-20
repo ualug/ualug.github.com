@@ -17,7 +17,7 @@
         user = this.get("user");
         action = this.get("action");
         target = this.get("target");
-        this.set("text", "" + ("<a class='user' href='" + user.link + "'>" + user.name + "</a>") + (" " + action + " ") + ("<a class='target' href='" + target.link + "'>" + target.name + "</a>"));
+        this.set("text", "" + ("<a class='user' href='" + user.link + "' title='" + user.name + "'><img src='" + user.avatar + "' /></a>") + (" " + action + " ") + ("<a class='target' href='" + target.link + "'>" + target.name + "</a>"));
         return this.get("text");
       }
     });
@@ -47,7 +47,8 @@
               date: moment(ev.created_at),
               user: {
                 name: ev.actor.login,
-                link: "https://github.com/" + ev.actor.login
+                link: "https://github.com/" + ev.actor.login,
+                avatar: ev.actor.avatar_url
               }
             };
             _.extend(item, (function() {

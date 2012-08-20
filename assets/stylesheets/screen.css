@@ -168,6 +168,10 @@ section.feed {}
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap; }
+    .feed .user img {
+      border-radius: 0 8px 0 8px;
+      vertical-align: middle;
+      width: 16px; }
 
 section.column a.more {
   color: gray;

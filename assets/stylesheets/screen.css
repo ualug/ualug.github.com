@@ -133,15 +133,31 @@ section.column {
     text-align: right;
     width: 85px;
     white-space: nowrap; }
-  section.column span.text {
-    display: inline }
-    section.column span.text:before {
+    section.column:not(.feed) time:after {
       content: ':';
       margin: 0 5px; }
+  section.column span.text {
+    display: inline-block;
+    hyphens: auto;
+    width: 165px; }
     section.column span.text a {
       color: #303D4D; }
       section.column span.text a:hover, section.column span.text a:focus {
         color: #666; }
+    section.column:not(.feed) span.text:before {
+      content: '';
+      margin: 0; }
+  section.column a.more {
+    color: gray;
+    display: block;
+    font-size: 0.75rem;
+    text-align: center;
+    text-transform: lowercase; }
+    section.column a.more:hover, section.column a.more:focus {
+      color: #303D4D; }
+    section.column a.more:before, section.column a.more:after {
+      content: '—';
+      margin: 0 5px; }
 
 section.multi {
   display: block;
@@ -162,28 +178,26 @@ section.feed {}
       color: #DD2121; }
     section.feed li.special {
       color: #881; }
+  section.feed time {}
+    section.feed time:after {
+      content: '';
+      margin: 0; }
   section.feed span.text {
     display: block;
     max-width: 300px;
     overflow: hidden;
     text-overflow: ellipsis;
+    width: auto;
     white-space: nowrap; }
     .feed .user img {
       border-radius: 0 8px 0 8px;
       vertical-align: middle;
       width: 16px; }
+    section.feed span.text:before {
+      content: ':';
+      margin: 0 5px; }
 
-section.column a.more {
-  color: gray;
-  display: block;
-  font-size: 0.75rem;
-  text-align: center;
-  text-transform: lowercase; }
-  section.column a.more:hover, section.column a.more:focus {
-    color: #303D4D; }
-  section.column a.more:before, section.column a.more:after {
-    content: '—';
-    margin: 0 5px; }
+
 
 .container {
   margin: 0 auto 50px;

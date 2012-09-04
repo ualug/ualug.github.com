@@ -46,7 +46,7 @@ $ ->
               action: "followed" 
               target: 
                 name: ev.payload.target.login
-                link: ev.payload.target.url
+                link: "https://github.com/#{ev.payload.target.login}"
               type: "special"
             when "Fork"
               action: "forked" 

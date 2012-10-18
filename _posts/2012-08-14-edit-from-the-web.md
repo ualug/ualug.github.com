@@ -29,7 +29,7 @@ There are a few rules to respect to be able to effectively edit posts.
 
 With that, you should be able to contribute content quite easily :)
 
-[1]: https://github.com/ualug/uasite
+[1]: https://github.com/ualug/ualug.github.com
 [2]: http://jekyllrb.com
 [3]: https://pages.github.com
 [4]: http://prose.io

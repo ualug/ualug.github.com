@@ -1,0 +1,286 @@
+/*
+Container Definition
+*/
+
+html, body {
+margin: 0px;
+padding: 0px;
+background-color: #c0c0c0;
+margin: 0 auto;
+text-align: center;
+height: 100%;
+}
+
+#biggestcontainer{
+margin: 0px;
+padding: 0px;
+height: 100%;
+margin: 0 auto;
+}
+
+#leftgradient{
+background: url('htmlimages/leftgradient.png') repeat-y;
+width: 5px;
+}
+
+#navigationcolumn{
+width: 178px;
+text-align: left;
+background-color: #ffffff;
+border-right-width: 2px;
+border-right-color: #ff3300;
+border-right-style: solid;
+vertical-align: top;
+}
+
+#contentcolumn{
+width: 785px;
+height: 100%;
+text-align: left;
+background: url('htmlimages/contentgradient.png') 0 0 repeat-x;
+background-color: white;
+padding-bottom: 10px;
+vertical-align: top;
+}
+
+#rightgradientcolumn{
+background: url('htmlimages/rightgradient.png') repeat-y;
+width: 5px;
+height: 100%;
+clear: right;
+}
+
+/*
+UALUG Logo
+ */
+ 
+ #UALUGlogo{
+ margin: 10px 2px 0 10px;
+ }
+
+ #UALUGlogo p{
+ text-align: center;
+ font-weight: bold;
+ font-size: 14px;
+ font-family: tahoma;
+ }
+ 
+ /*
+ Navigation
+ */
+ 
+#navigation{
+margin: 60px 0 0 -40px;
+}
+
+#navigation ul{
+list-style: none;
+text-align: left;
+}
+ 
+#navigation li{
+border-top-width: 0.03cm;
+border-top-color: #ff3300;
+border-top-style: solid;
+background-color: #ff6600;
+height: 20px;
+}
+
+#navigation li a{
+display: block;
+width: 174px;
+height: 20px;
+padding: 2px 0 0 4px;
+font-weight: bold;
+font-family: Arial;
+text-decoration: none;
+color: #ffffff;
+font-size: 12px;
+background-color: #ff6600;
+} 
+
+#navigation a:hover{
+background-color: #ff3300;
+}
+
+/* 
+Page last update
+*/
+
+#pagelastupdated{
+margin: 40px 0 -10px 0;
+}
+
+/*
+Content
+*/
+
+#content{
+width: 785px;
+height: 95%;
+padding: 0 12px 0 10px;
+margin: 0;
+clear: right;
+}
+
+#newscontent{
+float: left;
+width: 440px;
+}
+
+#eventcontent{
+float: right;
+width: 300px;
+padding: 2px;
+margin: 0;
+}
+
+/*
+Content column Header
+*/
+
+#contentheader{
+height: 25px;
+width: 100%;
+color: purple;
+text-align: left;
+font-size: 25px;
+font-family: Verdana, Garamond, Arial, "deja vu sans";
+float: left;
+clear: right;
+margin: 20px 0 30px 0;
+}
+
+/*
+Content column content
+*/
+
+#contentcontent{
+width: 100%;
+color: #2a2a2a;
+float: left;
+margin: 20px 0 0 0;
+}
+
+/* 
+Event Content top, middle, bottom
+*/
+
+.eventtop{
+background-image: url('htmlimages/top.png'); 
+background-repeat: no-repeat;
+height: 40px;
+width: 292px;
+clear: right;
+margin: 40px 0 0 0;
+text-align: center;
+color: #ffffff;
+padding: 10px 0 0 0;
+font-size: 17px;
+font-family: Arial;
+font-weight: bold;
+}
+
+.eventmiddle{
+width: 280px;
+background-image: url('htmlimages/pixel.png'); 
+clear: right;
+padding: 0 6px 0 6px;
+margin: 0px;
+text-align: justify;
+line-height: 150%;
+}
+
+.eventbottom{
+background-image: url('htmlimages/bottom.png'); 
+background-repeat: no-repeat;
+height: 50px;
+width: 292px;
+clear: right;
+}
+
+/*
+Definition of properties for contentcontent, newscontent, eventcontent. .news, .date, .paragraph are for "News & Events", while .item, .itemhead, .itemcomment are for the rest
+*/
+
+.eventtop img{
+margin: 0 4px -8px 4px;
+}
+
+.eventmiddle_header{
+font-weight: bold;
+color: #ffffff;
+}
+
+.eventmiddle_paragraph{
+color: #ffffff;
+}
+
+.eventmiddle_paragraph a{
+color: blue;
+text-decoration: none;
+font-weight: bold;
+}
+
+.eventmiddle_paragraph a:hover{
+color: #006600;
+}
+
+.news, .item{
+margin: 30px 0 10px 0;
+}
+
+.news{
+background-image: url('tux.gif'); 
+background-repeat: no-repeat;
+background-position: 0px 3px; 
+}
+
+.news a{
+font-weight: bold;
+text-decoration: none;
+color: blue;
+}
+
+.news a:hover{
+color: #A62A2A;
+}
+
+.item a{
+font-weight: bold;
+text-decoration: none;
+color: blue;
+}
+
+.item a:hover{
+color: #A62A2A;
+}
+
+.date, .itemhead {
+color: #aa5300;
+text-align: left;
+font-size: 16px;
+font-family: Tahoma;
+font-weight: bold;
+}
+
+.paragraph, .itemcomment{
+font-family: verdana;
+font-size: 14px;
+line-height: 23px;
+text-align: justify;
+}
+
+.date, .paragraph {
+margin: 0 0 0 50px;
+}
+
+/*
+CSS Validation. Note: If the content of the page exceeds 100%, please place validation container before the end of contentcontent <div>, as done for and contactcredit.htm
+*/
+
+#validation{
+text-align: right;
+padding: 0 10px 0 0;
+margin: 0;
+}

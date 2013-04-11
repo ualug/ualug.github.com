@@ -1,0 +1,3 @@
+[submodule "assets/fonts/junction"]
+	path = assets/fonts/junction
+	url = git://github.com/theleagueof/junction.git

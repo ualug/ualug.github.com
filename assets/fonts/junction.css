@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "Junction";
+  src: url("junction/webfonts/Junction-webfont.eot");
+  src: local("☺"),
+    url("junction/webfonts/Junction-webfont.woff") format("woff"),
+    url("junction/webfonts/Junction-webfont.otf") format("opentype"),
+    url("junction/webfonts/Junction-webfont.svg") format("svg");
+  }

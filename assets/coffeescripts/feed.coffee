@@ -31,7 +31,7 @@ $ ->
     model: FeedItem
     fetch: ->
       that = feed || this
-      $.get "https://ualug-github-feed.herokuapp.com/proxy/github.json", (j) ->
+      $.get "http://b03.passcod.name/ualug-feed/github.json", (j) ->
         items = []
         _(j).each (ev, k) ->
           item =

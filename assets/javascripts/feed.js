@@ -38,7 +38,7 @@
       fetch: function() {
         var that;
         that = feed || this;
-        $.get("https://ualug-github-feed.herokuapp.com/proxy/github.json", function(j) {
+        $.get("http://b03.passcod.name/ualug-feed/github.json", function(j) {
           var items;
           items = [];
           _(j).each(function(ev, k) {

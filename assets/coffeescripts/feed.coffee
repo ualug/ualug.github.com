@@ -11,6 +11,7 @@ $ ->
       user   = this.get "user"
       action = this.get "action"
       target = this.get "target"
+      return false unless action && target && user
       this.set "text", "" +
         "<a class='user' href='#{user.link}' title='#{user.name}'><img src='#{user.avatar}' /></a>" +
         " #{action} " +
@@ -31,7 +32,7 @@ $ ->
     model: FeedItem
     fetch: ->
       that = feed || this
-      $.get "http://b03.passcod.name/ualug-feed/github.json", (j) ->
+      $.get "https://stuff.passcod.name/ualug-feed/github.json", (j) ->
         items = []
         _(j).each (ev, k) ->
           item =
@@ -145,6 +146,11 @@ $ ->
               target: 
                 name: ev.repo.name
                 link: ev.payload.comment.html_url
+            when "TeamAdd"
+              action: "added team member"
+              target:
+                name: "#{ev.payload.user.login} (team: #{ev.payload.team.name})"
+                link: "https://github.com/#{ev.payload.user.login}"
 
           items[k] = new FeedItem item
 
